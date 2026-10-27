@@ -1,0 +1,8 @@
+$def with (msg)
+<h2>Cancelar pedido</h2>
+$if msg:
+    <p class="msg">$msg</p>
+<form method="POST">
+ <label>No de pedido <input name="id" type="number" min="1"></label>
+ <br><button type="submit">Cancelar</button>
+</form>

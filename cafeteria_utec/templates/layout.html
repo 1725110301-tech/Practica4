@@ -1,0 +1,23 @@
+$def with (page)
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Cafeteria UTEC</title>
+<style>
+ body{font-family:Arial,sans-serif;max-width:800px;margin:20px auto;padding:0 10px}
+ nav a{margin-right:12px} table{border-collapse:collapse;width:100%}
+ td,th{border:1px solid #333;padding:6px;text-align:left} .msg{color:#a00}
+ .ok{color:#070} label{display:block;margin-top:8px}
+</style>
+</head>
+<body>
+<h1>Cafeteria UTEC</h1>
+<nav>
+ <a href="/">Inicio</a><a href="/registrar">Registrar</a><a href="/preparar">Preparar</a>
+ <a href="/siguiente">Siguiente</a><a href="/pendientes">Pendientes</a>
+ <a href="/estadisticas">Estadisticas</a><a href="/cancelar">Cancelar</a>
+</nav><hr>
+$:page
+</body>
+</html>

@@ -1,0 +1,18 @@
+$def with (prio, normal)
+<h2>Pedidos pendientes</h2>
+<h3>Fila prioritaria ($len(prio))</h3>
+$if prio:
+    <table><tr><th>No</th><th>Cliente</th><th>Producto</th><th>Cant.</th><th>Min</th></tr>
+    $for p in prio:
+        <tr><td>$p['id']</td><td>$p['cliente']</td><td>$p['producto']</td><td>$p['cantidad']</td><td>$p['tiempo']</td></tr>
+    </table>
+$else:
+    <p>Vacia.</p>
+<h3>Fila normal ($len(normal))</h3>
+$if normal:
+    <table><tr><th>No</th><th>Cliente</th><th>Producto</th><th>Cant.</th><th>Min</th></tr>
+    $for p in normal:
+        <tr><td>$p['id']</td><td>$p['cliente']</td><td>$p['producto']</td><td>$p['cantidad']</td><td>$p['tiempo']</td></tr>
+    </table>
+$else:
+    <p>Vacia.</p>

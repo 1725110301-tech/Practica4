@@ -1,0 +1,13 @@
+$def with (p)
+<h2>Siguiente pedido</h2>
+$if p:
+    <table>
+     <tr><th>No pedido</th><td>$p['id']</td></tr>
+     <tr><th>Cliente</th><td>$p['cliente']</td></tr>
+     <tr><th>Producto</th><td>$p['producto']</td></tr>
+     <tr><th>Cantidad</th><td>$p['cantidad']</td></tr>
+     <tr><th>Tipo</th><td>$p['tipo']</td></tr>
+     <tr><th>Tiempo (min)</th><td>$p['tiempo']</td></tr>
+    </table>
+$else:
+    <p>No hay pedidos pendientes.</p>

@@ -1,0 +1,14 @@
+$def with (msg)
+<h2>Registrar pedido</h2>
+$if msg:
+    <p class="msg">$msg</p>
+<form method="POST">
+ <label>Nombre del cliente <input name="cliente"></label>
+ <label>Producto <input name="producto"></label>
+ <label>Cantidad <input name="cantidad" type="number" min="1" value="1"></label>
+ <label>Tipo
+  <select name="tipo"><option value="normal">normal</option><option value="prioritario">prioritario</option></select>
+ </label>
+ <label>Tiempo de preparacion (min) <input name="tiempo" type="number" min="1" value="5"></label>
+ <br><button type="submit">Registrar</button>
+</form>

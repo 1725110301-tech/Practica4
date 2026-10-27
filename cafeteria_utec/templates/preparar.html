@@ -1,0 +1,9 @@
+$def with (siguiente, hecho)
+<h2>Preparar siguiente pedido</h2>
+$if hecho:
+    <p class="ok">Pedido #$hecho['id'] de $hecho['cliente'] preparado.</p>
+$if siguiente:
+    <p>Siguiente en turno: #$siguiente['id'] - $siguiente['cliente'] ($siguiente['tipo'])</p>
+    <form method="POST"><button type="submit">Preparar</button></form>
+$else:
+    <p>No hay pedidos pendientes.</p>
